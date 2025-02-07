@@ -1,6 +1,6 @@
 import os
 from aiogram import Bot
-from notifier.scheduler import scheduler
+from scheduler import scheduler
 from bot.database import Database
 
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")

@@ -35,7 +35,7 @@ Telegram-бот для отслеживания сериалов. Пользов
 
 ### 1. Клонирование репозитория
 ```bash
-git clone https://github.com/yourusername/series-tracker-bot.git
+git clone https://github.com/IgorStefanovDeveloper/IS_SeriesTrackerBot
 cd series-tracker-bot
 ```
 ### 2. Создание .env файла
@@ -113,3 +113,27 @@ docker exec -it series-tracker-bot_postgres_1 psql -U postgres -d series_tracker
  - Уведомления (notifier/) : Периодическая проверка новых серий и отправка уведомлений.
  - PostgreSQL : Хранение данных пользователей и сериалов.
  - Redis : Кэширование данных API.
+
+
+series-tracker-bot/
+├── bot/                        # Telegram-бот
+│   ├── main.py                 # Главный файл бота
+│   ├── handlers.py             # Обработчики команд
+│   ├── database.py             # Работа с PostgreSQL
+├── api_service/                # Сервис для работы с API сериалов
+│   ├── main.py                 # Логика получения данных о сериалах
+│   └── api_clients.py          # Клиенты для внешних API (TMDb, TVmaze)
+├── notifier/                   # Сервис для отправки уведомлений
+│   ├── main.py                 # Проверка новых серий и отправка уведомлений
+│   ├── scheduler.py            # Планировщик задач
+│   └── notifications.py        # Логика уведомлений
+├── docker/                     # Docker-конфигурации
+│   ├── Dockerfile.api          # Для API-сервиса
+│   ├── Dockerfile.bot          # Для Telegram-бота
+│   └── Dockerfile.notifier     # Для сервиса уведомлений
+├── migrations/                 # Миграции базы данных
+│   ├── 001_initial.sql         # Начальная миграция
+├── docker-compose.yml          # Определение сервисов
+├── requirements.txt            # Зависимости проекта
+├── .env                        # Переменные окружения
+└── README.md                   # Описание проекта
