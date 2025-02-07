@@ -1,0 +1,57 @@
+# Системные файлы
+*.log
+*.pyc
+__pycache__/
+.vscode/
+.idea/
+
+# Виртуальное окружение
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Файлы Docker
+.dockerignore
+Dockerfile.*
+docker-compose.override.yml
+
+# Файлы сборки
+build/
+dist/
+*.spec
+
+# Кэш и временные файлы
+*.tmp
+*.swp
+*.swo
+*~
+
+# Конфиденциальные данные
+.env
+
+# Файлы миграций (если они генерируются автоматически)
+migrations/*.sql
+
+# Локальные базы данных
+*.sqlite3
+
+# Файлы IDE
+*.sublime-project
+*.sublime-workspace
+
+# Файлы тестирования
+coverage.xml
+htmlcov/
+.nox/
+.tox/
+.coverage
+.cache/
+
+# Файлы Render
+render.yaml
+deploy/entrypoint.sh
+
+# Логи и кэш Redis
+redis-data/
